@@ -1,3 +1,11 @@
+@font-face {
+	font-family: 'Roboto';
+	src: url('/fonts/Roboto-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
 :root {
     --celadon: #14AAA1;
     --gray: #6F7775;
@@ -13,6 +21,11 @@ html {
     padding: 0;
 }
 
+body {
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+
 ul {
     list-style: none;
 }
@@ -25,16 +38,31 @@ a {
     display: inline-block;
     padding-block: 20px;
     width: 193px;
+    height: 20px;
     border: 1.5px solid var(--celadon);
     border-radius: 8px;
     text-align: center;
 
     font-size: 1.6rem;
-    color: white;
+    line-height: 20px;
+}
+
+.button-celadon {
     background-color: var(--celadon);
+    color: white;
+}
+
+.button-celadon:hover {
+    background-color: white;
+    color: var(--celadon);
 }
 
 .button-light {
     background-color: white;
-    color: var(--celadon);
+    color: var(--celadon)
+}
+
+.button-light:hover {
+    background-color: var(--celadon);
+    color: white;
 }
