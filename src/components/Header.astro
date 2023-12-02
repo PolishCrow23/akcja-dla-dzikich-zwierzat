@@ -1,16 +1,108 @@
+
 <header>
     <div class="social-links">
+        <a href="https://www.facebook.com/AkcjaDzikieKrakow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5Z"/></svg>
+        </a>
         <a href=#>
-        <a href=#>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37zm1.5-4.87h.01"/></g></svg>
+        </a>
     </div>
-    <div>
+
+    <div class="text">
         <navigation>
+            <div>
+                <img class="logo" src="/meta/logo.png">
+                <span>Fundacja Akcja dla Dzikich zwierząt</span>
+            </div>
+            <div class="links">
+                <div class="buttons">
+                    <a class="button button-light" href=#>Wspomóż nas</a>
+                    <a class="button" href=#>Znalazłeś zwierzę?</a>
+                </div>
+                <ul class="internal-links">
+                    <li><a href="#">O AKCJI</a></li>
+                    <li><a href="#">WOLONTARIAT</a></li>   
+                    <li><a href="#">ZNALAZŁEM DZIKIE ZWIERZĘ</a></li>           
+                    <li><a href="#">JAK NAM POMÓC?</a></li>
+                    <li><a href="#">KONTAKT</a></li>
+                </ul>
+            </div>
+            </div>
         </navigation>
     </div>
 </header>
 
-<style>
+<style>    
     .social-links {
-        background-color: yellow;
-        height: 100px;
+        height: 57px;
+        padding-inline: 45px;
+
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+
+        background-color: var(--celadon);
     }
+
+    .social-links a {
+        color: white;
+    }
+
+    .social-links a:hover {
+        color: var(--gray);
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 34px;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .internal-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 34px;
+
+        font-size: 1.4rem;
+    }
+
+    .internal-links a {
+        color: var(--celadon);
+    }
+
+    .logo {
+        height: 116px;
+    }
+
+    navigation {
+        padding-inline: calc(5vw + 0.1rem);
+        padding-block: 20px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    navigation .internal-links {
+        color: var(--celadon);
+    }
+
+
+	@media  (max-width: 600px) {
+        navigation {
+            flex-direction: column;
+            padding-inline: 2%;
+        }
+	}

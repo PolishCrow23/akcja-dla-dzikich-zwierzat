@@ -1,0 +1,40 @@
+:root {
+    --celadon: #14AAA1;
+    --gray: #6F7775;
+    --black: #263435;
+}
+
+html { 
+    font-size: 62.5% 
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    display: inline-block;
+    padding-block: 20px;
+    width: 193px;
+    border: 1.5px solid var(--celadon);
+    border-radius: 8px;
+    text-align: center;
+
+    font-size: 1.6rem;
+    color: white;
+    background-color: var(--celadon);
+}
+
+.button-light {
+    background-color: white;
+    color: var(--celadon);
+}
