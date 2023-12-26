@@ -6,6 +6,30 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: 'Roboto';
+	src: url('/fonts/Roboto-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Amatic SC';
+	src: url('/fonts/AmaticSC-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Open Sans Condensed';
+	src: url('/fonts/OpenSans-CondLight.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
 :root {
     --celadon: #14AAA1;
     --gray: #6F7775;
@@ -32,6 +56,18 @@ ul {
 
 a {
     text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+a:hover {
+    transition-duration: 0.2s;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid #14aaa1;
+    width: 27px;
+    margin-bottom: 1.5em;
 }
 
 .button {

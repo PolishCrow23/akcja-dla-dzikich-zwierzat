@@ -1,7 +1,25 @@
 <footer>
-    <div>
-        <h2>hello</h2>
+    <div class="fond-info">
+        <div class="logo-div">
+            <img src="/meta/logo-footer.png">
+            <h2>Fundacja</br> Akcja dla Dzikich Zwierząt</h2>
+        </div>
+        <div>
+            <ul>
+                <li>KRS: XXX</li>
+                <li>Nr konta: XXX</li>
+            </ul>
+        </div>
+        <div>
+            <a href="https://www.facebook.com/AkcjaDzikieKrakow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5Z"/></svg>
+            </a>
+            <a href=#>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37zm1.5-4.87h.01"/></g></svg>
+            </a>
+        </div>
     </div>
+
     <div class="info">
         <div>
             <ul>
@@ -28,9 +46,9 @@
             <ul>
                 <h4>Godziny otwarcia</h4>
                 <hr>
-                <li>Poniedziałek-Piątek: 9:00 - 21:00</li>
-                <li>Sobota: 9:00 - 16:00</li>
-                <li>Niedziela: 10:00 - 15:00</li>
+                <li><h5>Poniedziałek-Piątek:</h5> 9:00 - 21:00</li>
+                <li><h5>Sobota:</h5> 9:00 - 16:00</li>
+                <li><h5>Niedziela:</h5> 10:00 - 15:00</li>
             </ul>
         </div>
     </div>
@@ -38,15 +56,39 @@
 
 <style>
     footer {
-        min-height: 100px;
-        padding: 30px 80px;
+        padding: 60px 80px;
 
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
 
         color: white;
         background-color: #263435;
     }
+
+    .fond-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .logo-div {
+        display: flex;
+        gap: 1em;
+    }
+
+    h2 {
+        font-family: 'Amatic SC';
+        font-weight: 400;
+        font-size: 2.1rem;
+    }
+
+    img {
+        width: 100%;
+        width: 43px;
+    }
+
     .info {
         display: flex;
         justify-content: space-between;
@@ -55,8 +97,27 @@
     a {
         color: white;
     }
-    hr {
-        border-top: 10px solid rgb(0, 136, 255);
-        width: 50px;
+
+    h4 {
+        margin-bottom: 2px;
+        font-size: 1.8rem;
+        font-family: 'Roboto';
+    }
+
+    li {
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 1.6rem;
+        margin-bottom: 0.2em;
+    }
+    li a {
+        font-weight: 400;
+    }
+
+    h5 {
+        display: inline;
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 1.6rem;
     }
 </style>

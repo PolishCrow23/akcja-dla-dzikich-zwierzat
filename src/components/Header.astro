@@ -13,7 +13,7 @@
         <navigation>
             <a href="/"><div class="logo-div">
                 <img class="logo" src="/meta/logo.png">
-                <span>Fundacja Akcja dla Dzikich zwierząt</span>
+                <h1>Fundacja</br> Akcja dla Dzikich zwierząt</h1>
             </div></a>
             <div class="links">
                 <div class="buttons">
@@ -108,10 +108,26 @@
         color: var(--celadon);
     }
 
+    .logo-div {
+        display: flex;
+        align-items: center;
+        gap: 2em;
+    }
 
-	@media  (max-width: 600px) {
+    h1 {
+        font-family: 'Amatic SC';
+        font-weight: 400;
+        color: var(--black);
+        font-size: calc(3.5vw + 0.1rem)
+    }
+
+
+	@media  (max-width: 768px) {
         navigation {
             flex-direction: column;
             padding-inline: 2%;
+        }
+        .buttons {
+            justify-content: center;
         }
 	}

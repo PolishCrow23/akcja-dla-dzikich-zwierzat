@@ -1,11 +1,11 @@
 <section>
     <div class="images">
         <img class="big-img" src="/index/uszatka.png">
-        <img class="small-img" src="/index/srebrniak.png">
-        
+        <!-- <img class="small-img" src="/index/srebrniak.png"> -->
     </div>
     <div>
         <h2>O Akcji</h2>
+        <hr>
         <p>W celu ratowania dzikich zwierząt w przychodni Vetika została powołana Fundacja Akcja dla Dzikich Zwierząt, która prowadzi ośrodek rehabilitacji dzikich zwierząt.</p>
         <ul>
             <li>Leczymy i rehabilitujemy zwierzęta dziko występujące</li>
@@ -15,14 +15,16 @@
 </section>
 
 <style>
+    h2 {
+        font-size: 4rem;
+    }
     .images {
         
     }
     section {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         padding: 20px;
-        flex-wrap: wrap;
     }
     .big-img {
         max-width: 500px;
@@ -33,9 +35,14 @@
     .small-img {
         max-width: 233px;
         width: 100%;
-        position: relative;
+        /* position: relative;
         left: -560px;
-        top: 50px;
+        top: 50px; */
+    }
+
+    hr {
+        border-top: 7px solid #14aaa1;
+        width: 65px;
     }
 
     @media (max-width: 800px) {
