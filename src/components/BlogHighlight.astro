@@ -1,3 +1,6 @@
+---
+const allPosts = await Astro.glob('../pages/posts/*.md');
+---
 <section>
 <div>
     <h2>O Akcji</h2>
@@ -5,6 +8,9 @@
     <ul>
         <li>Leczymy i rehabilitujemy zwierzęta dziko występujące</li>
         <li>Rocznie przyjmujemy ponad 1000 zwierząt</li>
+    </ul>
+    <ul>
+        {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
     </ul>
 </div>
 </section>
