@@ -1,8 +1,14 @@
 ---
+import BaseHead from "../components/BaseHead.astro";
+import Header from '../components/Header.astro'
+import Footer from "../components/Footer.astro";
 const allPosts = await Astro.glob('../pages/blog/*.md');
+const pageTitle = "Aktualności";
 ---
-
-<section>
+<BaseHead />
+<Header />
+<main>
+    <h1>{pageTitle}</h1>
     <ul>
         {allPosts.map((post) => 
             <li>
@@ -13,20 +19,28 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
             </a>
             </li>)}
     </ul>
-</section>
+</main>
+<Footer />
 
 <style>
-    section { 
-        background-color: #fafafa;
+    main {
+        width: 900px;
+        margin: 0 auto;
     }
-    img {
-        width: 300px;
-    }
+
     ul {
         display: flex;
         flex-wrap: wrap;
     }
+
     li {
-        margin: 0 auto;
+        width: 900px;
+    }
+
+    h2 {
+        color: green;
+    }
+    img {
+        width: 400px;
     }
 </style>
