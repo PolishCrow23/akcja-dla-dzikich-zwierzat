@@ -3,12 +3,17 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
 ---
 
 <section>
+    <h2>Blog</h2>
+    <hr>
     <ul>
         {allPosts.map((post) => 
             <li>
             <a href={post.url}>
             <img src={post.frontmatter.heroImage}/>
-            <h2>{post.frontmatter.title}</h2>
+            <div class="wrapper">
+                <h3>{post.frontmatter.title}</h3>
+                <span>{post.frontmatter.pubDate}</span>
+            </div>
             <p>{post.frontmatter.description}</p>
             </a>
             </li>)}
@@ -16,8 +21,19 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
 </section>
 
 <style>
+    
     section { 
         background-color: #fafafa;
+        padding: 6em;
+    }
+    ul {
+        padding-block: 4em;
+    }
+    h2 {
+        font-size: 4rem;
+    }
+    h3 {
+        font-size: 2rem;
     }
     img {
         width: 300px;
@@ -26,7 +42,19 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
         display: flex;
         flex-wrap: wrap;
     }
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    span {
+        display: block;
+    }
     li {
         margin: 0 auto;
+        background-color: aquamarine;
+    }
+    hr {
+        border-top: 7px solid #14aaa1;
+        width: 65px;
     }
 </style>
