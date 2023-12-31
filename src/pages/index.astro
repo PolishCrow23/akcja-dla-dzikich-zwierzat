@@ -11,6 +11,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 <html lang="en">
 	<head>
+		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
@@ -19,5 +20,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<About/>
 		<BlogHighlight/>
 		<Footer/>
+		<script>
+			if (window.netlifyIdentity) {
+			  window.netlifyIdentity.on("init", user => {
+				if (!user) {
+				  window.netlifyIdentity.on("login", () => {
+					document.location.href = "/admin/";
+				  });
+				}
+			  });
+			}
+		  </script>
 	</body>
 </html>
