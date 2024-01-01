@@ -8,14 +8,14 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
     <ul>
         {allPosts.map((post) => 
             <li>
-            <a href={post.url}>
-            <img src={post.frontmatter.heroImage}/>
-            <div class="wrapper">
-                <h3>{post.frontmatter.title}</h3>
-                <span>{post.frontmatter.pubDate}</span>
-            </div>
-            <p>{post.frontmatter.description}</p>
-            </a>
+                <a href={post.url}>
+                    <img src={post.frontmatter.heroImage}/>
+                    <div class="wrapper">
+                        <h3>{post.frontmatter.title}</h3>
+                        <span>{post.frontmatter.pubDate}</span>
+                    </div>
+                    <p>{post.frontmatter.description}</p>
+                </a>
             </li>)}
     </ul>
 </section>
@@ -51,10 +51,35 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
     }
     li {
         margin: 0 auto;
-        background-color: aquamarine;
+        background-color: rgb(221, 221, 221);
     }
     hr {
         border-top: 7px solid #14aaa1;
         width: 65px;
+    }
+    li {
+        width: 344px;
+        height: 431px;
+        border-radius: 12px;
+        padding: 1em;
+    }
+    
+    a {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1em;
+    }
+    img {
+        width: 232px;
+    }
+    li:hover {
+        transform: scale(1.05);
+        transform-origin: top;
+        transition-duration: 0.5s;
+    }
+    li {
+        transition-duration: 0.5s;
     }
 </style>

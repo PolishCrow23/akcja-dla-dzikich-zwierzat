@@ -18,4 +18,4 @@ collections:
       - {label: "data publikacji", name: "date", widget: "datetime"}
       - {label: "opis", name: "description", widget: "string"}
       - {label: "zdjęcie główne", name: "heroImage", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "tekst", name: "body", widget: "markdown"}
