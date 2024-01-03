@@ -5,19 +5,21 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
 <section>
     <h2>Blog</h2>
     <hr>
-    <ul>
-        {allPosts.map((post) => 
-            <li>
-                <a href={post.url}>
+
+    <div class="wrapper">
+        {allPosts
+        .map((post) => 
+            <a href={post.url}>
+                <div class="post-card">
                     <img src={post.frontmatter.heroImage}/>
-                    <div class="wrapper">
-                        <h3>{post.frontmatter.title}</h3>
-                        <span>{post.frontmatter.pubDate}</span>
+                    <div class="title-date">
+                        <h2 class="title">{post.frontmatter.title}</h2>
+                        <span>{post.frontmatter.date}</span>
                     </div>
                     <p>{post.frontmatter.description}</p>
-                </a>
-            </li>)}
-    </ul>
+                </div>
+            </a>).slice(0,3)}
+    </div>
 </section>
 
 <style>
@@ -38,48 +40,55 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
     img {
         width: 300px;
     }
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-    }
     .wrapper {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
-    }
-    span {
-        display: block;
-    }
-    li {
-        margin: 0 auto;
-        background-color: rgb(221, 221, 221);
+        gap: 3em;
     }
     hr {
         border-top: 7px solid #14aaa1;
         width: 65px;
     }
-    li {
-        width: 344px;
-        height: 431px;
-        border-radius: 12px;
-        padding: 1em;
-    }
-    
-    a {
+    .post-card {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
+
+        width: 344px;
+        height: 431px;
+        border-radius: 16px;
+        padding: 1em;
+
+        margin: 0 auto;
+        background-color: rgb(221, 221, 221);
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .title-date {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         gap: 1em;
     }
+    
     img {
-        width: 232px;
+        width: 312px;
+        height: 232px;
+        border-radius: 8px;
+        object-fit: cover;
     }
-    li:hover {
-        transform: scale(1.05);
+
+    .post-card:hover {
+        transform: scale(1.03);
         transform-origin: top;
         transition-duration: 0.5s;
     }
-    li {
+    .post-card {
         transition-duration: 0.5s;
     }
 </style>

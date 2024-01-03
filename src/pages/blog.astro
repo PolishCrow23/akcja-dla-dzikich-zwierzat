@@ -9,16 +9,16 @@ const pageTitle = "Aktualności";
 <Header />
 <main>
     <h1>{pageTitle}</h1>
-    <ul>
+
         {allPosts.map((post) => 
-            <li>
-                <a href={post.url}>
+            <a href={post.url}>
+                <div>
                     <img src={post.frontmatter.heroImage}/>
                     <h2>{post.frontmatter.title}</h2>
                     <p>{post.frontmatter.description}</p>
-                </a>
-            </li>)}
-    </ul>
+                </div>
+            </a>)}
+
 </main>
 <Footer />
 
