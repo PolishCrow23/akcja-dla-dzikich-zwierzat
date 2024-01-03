@@ -6,20 +6,20 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
     <h2>Blog</h2>
     <hr>
 
-    <div class="wrapper">
+    <ul class="wrapper">
         {allPosts
         .map((post) => 
-            <a href={post.url}>
-                <div class="post-card">
-                    <img src={post.frontmatter.heroImage}/>
-                    <div class="title-date">
-                        <h2 class="title">{post.frontmatter.title}</h2>
-                        <span>{post.frontmatter.date}</span>
-                    </div>
-                    <p>{post.frontmatter.description}</p>
-                </div>
-            </a>).slice(0,3)}
-    </div>
+                <li class="post-card">
+                    <a href={post.url} class="heroImg"><img src={post.frontmatter.heroImage}/></a>
+                        <div class="title-date">
+                            <a href={post.url}><h2 class="title">{post.frontmatter.title}</h2></a>
+                            <span>{post.frontmatter.date}</span>
+                        </div>
+                        <p class="description">{post.frontmatter.description}</p>
+                        <a href={post.url}class="more-info"><span>Więcej</span></a>
+                </li>
+            ).slice(0,3)}
+    </ul>
 </section>
 
 <style>
@@ -37,8 +37,11 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
     h3 {
         font-size: 2rem;
     }
+    .heroImg {
+        margin-inline: auto;
+    }
     img {
-        width: 300px;
+        margin: 0 auto;
     }
     .wrapper {
         display: flex;
@@ -50,19 +53,23 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
         border-top: 7px solid #14aaa1;
         width: 65px;
     }
+    .description {
+        font-size: 1.4rem;
+        color: var(--gray);
+    }
     .post-card {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+        justify-content: space-between;
 
         width: 344px;
-        height: 431px;
+        min-height: 431px;
         border-radius: 16px;
         padding: 1em;
 
         margin: 0 auto;
-        background-color: rgb(221, 221, 221);
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
 
     .title {
@@ -75,6 +82,10 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
         justify-content: space-between;
         gap: 1em;
     }
+
+    .more-info {
+        margin-left: auto;
+    }
     
     img {
         width: 312px;
@@ -84,9 +95,9 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
     }
 
     .post-card:hover {
-        transform: scale(1.03);
         transform-origin: top;
         transition-duration: 0.5s;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     }
     .post-card {
         transition-duration: 0.5s;
