@@ -12,18 +12,25 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
                 <li class="post-card">
                     <a href={post.url} class="heroImg"><img src={post.frontmatter.heroImage}/></a>
                         <div class="title-date">
-                            <a href={post.url}><h2 class="title">{post.frontmatter.title}</h2></a>
+                            <a href={post.url} class="title"><h2>{post.frontmatter.title}</h2></a>
                             <span>{post.frontmatter.date}</span>
                         </div>
                         <p class="description">{post.frontmatter.description}</p>
-                        <a href={post.url}class="more-info"><span>Więcej</span></a>
+                        <a href={post.url}class="more-info"><span>Więcej</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018a.751.751 0 0 1-.018-1.042L9.94 8L6.22 4.28a.75.75 0 0 1 0-1.06"/></svg></a>
                 </li>
             ).slice(0,3)}
     </ul>
 </section>
 
 <style>
-    
+    svg {
+    vertical-align: middle;
+    }
+
+    a:hover {
+        color: var(--gray);
+    }
+
     section { 
         background-color: #fafafa;
         padding: 6em;
@@ -51,7 +58,7 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
     }
     hr {
         border-top: 7px solid #14aaa1;
-        width: 65px;
+        width: 50px;
     }
     .description {
         font-size: 1.4rem;
@@ -72,8 +79,12 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
 
-    .title {
+    .title h2 {
         font-size: 2.2rem;
+    }
+
+    .title {
+        color: var(--black);
     }
 
     .title-date {
@@ -85,6 +96,7 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
 
     .more-info {
         margin-left: auto;
+        color: var(--celadon);
     }
     
     img {

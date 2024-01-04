@@ -31,10 +31,13 @@
     }
 
     li {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        margin-bottom: 0.8em;
+
         font-weight: 400;
-        gap: 0.9em;
         font-size: 1.6rem;
-        line-height: 2;
     }
 
     section {
@@ -65,9 +68,11 @@
     .small-img {
         max-width: 233px;
         width: 100%;
-        /* position: relative;
-        left: -560px;
-        top: 50px; */
+    }
+
+    .button svg {
+    vertical-align: middle;
+    margin-left: 5px;
     }
 
 
@@ -78,6 +83,7 @@
 
     .check {
         width: 18px;
+        aspect-ratio: 1;
     }
 
     @media (max-width: 900px) {
