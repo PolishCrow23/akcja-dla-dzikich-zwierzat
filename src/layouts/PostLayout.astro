@@ -1,0 +1,22 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+<html lang="en">
+	<head>
+        <BaseHead />
+        <Header />
+        <div>
+        <slot />
+        </div>
+        <Footer />
+</head>
+
+<style>
+    div {
+        max-width: 740px;
+        padding: 50px 2%;
+        margin: 0 auto;
+    }
+</style>

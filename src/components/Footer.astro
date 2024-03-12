@@ -7,15 +7,15 @@
             </div>
             <div>
                 <ul>
-                    <li>KRS: XXX</li>
-                    <li>Nr konta: XXX</li>
+                    <li>KRS: 000465258</li>
+                    <li>Nr konta: 15114020040000380283789982</li>
                 </ul>
             </div>
             <div>
                 <a href="https://www.facebook.com/AkcjaDzikieKrakow">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5Z"/></svg>
                 </a>
-                <a href=#>
+                <a href='https://www.instagram.com/akcjadladzikichzwierzat'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37zm1.5-4.87h.01"/></g></svg>
                 </a>
             </div>
@@ -32,11 +32,11 @@
                 <ul>
                     <h4>Menu</h4>
                     <hr>
-                    <li><a href="#">O Akcji</a></li>
-                    <li><a href="#">Wolontariat</a></li>
-                    <li><a href="#">Znalazłem dzikie zwierzę</a></li>
-                    <li><a href="#">Jak nam pomóc?</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="o-akcji">O Akcji</a></li>
+                    <li><a href="wolontariat">Wolontariat</a></li>
+                    <li><a href="znalazłem-dzikie-zwierzę">Znalazłem dzikie zwierzę</a></li>
+                    <li><a href="jak-nam-pomóc">Jak nam pomóc?</a></li>
+                    <li><a href="kontakt">Kontakt</a></li>
                 </ul>
             </div>
             <div>  
@@ -82,7 +82,7 @@
         flex-direction: row;
         justify-content: space-around;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 50px;
     }
 
     .fond-logo {
@@ -115,7 +115,7 @@
     .fond-info {
         display: flex;
         justify-content: space-between;
-        wrap: wrap;
+        flex-wrap: wrap;
         gap: 50px;
     }
     a {
@@ -148,5 +148,11 @@
         font-family: 'Roboto';
         font-weight: 400;
         font-size: 1.6rem;
+    }
+
+    @media  (max-width: 768px) {
+        .fond-info {
+            padding-inline: 10%;
+        }
     }
 </style>

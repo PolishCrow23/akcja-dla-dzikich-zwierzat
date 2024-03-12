@@ -50,6 +50,10 @@ body {
     font-weight: 300;
 }
 
+h2 {
+    font-size: 2.4rem;
+}
+
 ul {
     list-style: none;
 }
@@ -57,7 +61,9 @@ ul {
 p {
     font-size: 1.6rem;
     font-weight: 300;
-    line-height: 1.6;
+    line-height: 1.8;
+    margin-bottom: 1em;
+    text-align: justify;
 }
 
 span {
@@ -113,4 +119,8 @@ hr {
 .button-light:hover {
     background-color: var(--celadon);
     color: white;
+}
+
+.bold {
+    font-weight: 500;
 }

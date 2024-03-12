@@ -4,7 +4,7 @@
         <a href="https://www.facebook.com/AkcjaDzikieKrakow">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5Z"/></svg>
         </a>
-        <a href=#>
+        <a href='https://www.instagram.com/akcjadladzikichzwierzat'>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37zm1.5-4.87h.01"/></g></svg>
         </a>
     </div>
@@ -17,15 +17,15 @@
             </div></a>
             <div class="links">
                 <div class="buttons">
-                    <a class="button button-light" href=#>Wspomóż nas <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 710 780"><path fill="currentColor" d="M651 55q29 27 44 61t15 71t-13 71t-42 63L371 605q-7 7-16 7t-17-7L54 321q-27-28-40-63T1 187t14-71t42.5-61T121 17t70-11t70 16t61 42l33 33l33-33q27-27 61-42t70-16t70 11t62 38z"/></svg></a>
-                    <a class="button button-celadon" href=#>Znalazłeś zwierzę?</a>
+                    <a class="button button-light" href='/jak-nam-pomóc'>Wspomóż nas <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 710 780"><path fill="currentColor" d="M651 55q29 27 44 61t15 71t-13 71t-42 63L371 605q-7 7-16 7t-17-7L54 321q-27-28-40-63T1 187t14-71t42.5-61T121 17t70-11t70 16t61 42l33 33l33-33q27-27 61-42t70-16t70 11t62 38z"/></svg></a>
+                    <a class="button button-celadon" href='/znalazłem-dzikie-zwierzę'>Znalazłeś zwierzę?</a>
                 </div>
                 <ul class="internal-links">
-                    <li><a href="#">O AKCJI</a></li>
-                    <li><a href="#">WOLONTARIAT</a></li>   
-                    <li><a href="#">ZNALAZŁEM DZIKIE ZWIERZĘ</a></li>           
-                    <li><a href="#">JAK NAM POMÓC?</a></li>
-                    <li><a href="#">KONTAKT</a></li>
+                    <li><a href="o-akcji">O AKCJI</a></li>
+                    <li><a href="wolontariat">WOLONTARIAT</a></li>   
+                    <li><a href="znalazłem-dzikie-zwierzę">ZNALAZŁEM DZIKIE ZWIERZĘ</a></li>           
+                    <li><a href="jak-nam-pomóc">JAK NAM POMÓC?</a></li>
+                    <li><a href="kontakt">KONTAKT</a></li>
                 </ul>
             </div>
             </div>
@@ -130,7 +130,15 @@
         .buttons {
             justify-content: center;
         }
+
         h1 {
             font-size: calc(2.8vw + 2.5rem)
         }
 	}
+
+    @media  (max-width: 468px) {
+        .button {
+            width: 50%;
+            gap: 10px;
+        }
+    }
