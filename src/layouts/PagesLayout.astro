@@ -1,0 +1,39 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+const { frontmatter } = Astro.props;
+---
+<html lang="en">
+	<head>
+        <BaseHead />
+    </head>
+    <body>
+        <Header />
+        <div>
+            <div class = "title">
+                <h1>{frontmatter.title}</h1>
+                <hr>
+            </div>
+            <slot />
+        </div>
+        <Footer />
+    </body>
+
+<style>
+    div {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+    .title {
+        margin: 6em 0 5em;
+    }
+    h1 {
+        text-align: center;
+        font-size: 3.6rem;
+        margin-bottom: 0.6em;
+    }
+    hr {
+        width: 100%;
+    }
+</style>

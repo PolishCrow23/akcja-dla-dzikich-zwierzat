@@ -1,5 +1,14 @@
 ---
 import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description: string;
+	author: string;
+	image?: string;
+}
+
+const { title, description, author, image = '/public/images/index/about.png'} = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -8,6 +17,12 @@ import '../styles/global.css';
 <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 <meta name="generator" content={Astro.generator} />
 
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="author" content={author} />
+<meta name="image" content={image} />
 
 <!-- Font preloads -->
 <link rel="preload" href="/fonts/Roboto-Medium.ttf" as="font" type="font/ttf" crossorigin />
