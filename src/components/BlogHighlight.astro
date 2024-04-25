@@ -1,16 +1,43 @@
 ---
-const allPosts = await Astro.glob('../pages/blog/*.md');
+import type { CollectionEntry } from "astro:content"
+import Post from "./Post.astro"
+type Props = {
+    posts: CollectionEntry<"posts">[]
+}
+const { posts } = Astro.props
 ---
 
 <section>
     <h2>Blog</h2>
+    <hr>
+    <div>
+        {posts.map((post) => <Post post={post}/>)}
+    </div>
+</section>
+
+<style>
+    div {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    hr {
+        border-top: 7px solid #14aaa1;
+        margin-bottom: 3em;
+        width: 65px;
+    }
+</style>
+
+
+    <!-- <h2>Blog</h2>
     <hr>
 
     <ul class="wrapper">
         {allPosts
         .map((post) => 
                 <li class="post-card">
-                    <a href={post.url} class="heroImg"><img src={post.frontmatter.heroImage}/></a>
+                    <a href={post.url} class="heroImg"><img src={post.frontmatter.image}/></a>
                         <div class="title-date">
                             <a href={post.url} class="title"><h2>{post.frontmatter.title}</h2></a>
                             <span>{post.frontmatter.pubDate}</span>
@@ -19,8 +46,7 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
                         <a href={post.url}class="more-info"><span>Więcej</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018a.751.751 0 0 1-.018-1.042L9.94 8L6.22 4.28a.75.75 0 0 1 0-1.06"/></svg></a>
                 </li>
             ).slice(0,3)}
-    </ul>
-</section>
+    </ul> -->
 
 <style>
     svg {
@@ -28,7 +54,7 @@ const allPosts = await Astro.glob('../pages/blog/*.md');
     }
 
     a:hover {
-        color: var(--gray);
+        color: var(--cel);
     }
 
     section { 

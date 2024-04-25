@@ -3,12 +3,12 @@ import '../styles/global.css';
 
 interface Props {
 	title: string;
+	date: string;
 	description: string;
-	author: string;
 	image?: string;
 }
 
-const { title, description, author, image = '/public/images/index/about.png'} = Astro.props;
+const { title, date, description, image } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -20,14 +20,14 @@ const { title, description, author, image = '/public/images/index/about.png'} = 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />
+<meta name="date" content={date} />
 <meta name="description" content={description} />
-<meta name="author" content={author} />
 <meta name="image" content={image} />
 
 <!-- Font preloads -->
 <link rel="preload" href="/fonts/Roboto-Medium.ttf" as="font" type="font/ttf" crossorigin />
 <link rel="preload" href="/fonts/Roboto-Light.ttf" as="font" type="font/ttf" crossorigin />
-<link rel="preload" href="/fonts/Inter-Medium.ttf" as="font" type="font/ttf" crossorigin />
-<link rel="preload" href="/fonts/Inter-SemiBold.ttf" as="font" type="font/ttf" crossorigin />
+<!-- <link rel="preload" href="/fonts/Inter-Medium.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="preload" href="/fonts/Inter-SemiBold.ttf" as="font" type="font/ttf" crossorigin /> -->
 <link rel="preload" href="/fonts/AmaticSC-Regular.ttf" as="font" type="font/ttf" crossorigin />
 <link rel="preload" href="/fonts/OpenSans-CondLight.ttf" as="font" type="font/ttf" crossorigin />

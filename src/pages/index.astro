@@ -1,12 +1,14 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import About from "../components/About.astro";
-import Hero from "../components/Hero.astro";
-import BlogHighlight from "../components/BlogHighlight.astro";
 import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import BlogHighlight from "../components/BlogHighlight.astro";
 import Footer from "../components/Footer.astro";
-
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+import { getCollection } from "astro:content";
+const posts = await getCollection("posts");
 ---
 
 <html lang="en">
@@ -18,7 +20,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header/>
 		<Hero/>
 		<About/>
-		<BlogHighlight/>
+		<BlogHighlight posts={posts}/>
 		<Footer/>
 		<script>
 			if (window.netlifyIdentity) {
@@ -30,6 +32,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				}
 			  });
 			}
-		  </script>
+		</script>
 	</body>
 </html>

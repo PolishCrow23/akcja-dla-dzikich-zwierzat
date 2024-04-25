@@ -37,8 +37,13 @@
 }
 
 html { 
-    font-size: 62.5% 
+    font-size: 62.5%;
+    box-sizing: border-box;
 } 
+   
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 
 * {
     margin: 0;
@@ -90,9 +95,8 @@ hr {
 
 .button {
     display: inline-block;
-    padding-block: 20px 19px;
+    padding-block: 15px;
     width: 193px;
-    height: 20px;
 
     border: 1.5px solid var(--celadon);
     border-radius: 8px;

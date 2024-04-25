@@ -1,46 +1,47 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from '../components/Header.astro'
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-const allPosts = await Astro.glob('../pages/blog/*.md');
-const pageTitle = "Aktualności";
+import { getCollection } from "astro:content"
+import PostList from "../components/PostList.astro";
+
+const posts = await getCollection("posts");
 ---
-<BaseHead />
-<Header />
-<main>
-    <h1>{pageTitle}</h1>
 
-        {allPosts.map((post) => 
-            <a href={post.url}>
-                <div>
-                    <img src={post.frontmatter.heroImage}/>
-                    <h2>{post.frontmatter.title}</h2>
-                    <p>{post.frontmatter.description}</p>
-                </div>
-            </a>)}
-
-</main>
-<Footer />
+<html lang="en">
+	<head>
+        <BaseHead/>
+	</head>
+    <body>
+        <Header/>
+        <main>
+            <div>
+                <h2>Blog</h2>
+                <hr>
+                <PostList posts={posts}/>
+            </div>
+        </main>
+        <Footer/>
+    </body>
+</html>
 
 <style>
-    main {
-        width: 900px;
+    main div{
+        margin: 0 auto;
+        padding: 4em 11em;
+    }
+
+    div {
         margin: 0 auto;
     }
 
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    li {
-        width: 900px;
-    }
-
     h2 {
-        color: green;
+        font-size: 4rem;
     }
-    img {
-        width: 400px;
+
+    hr {
+        border-top: 7px solid #14aaa1;
+        margin-bottom: 3em;
+        width: 65px;
     }
 </style>
