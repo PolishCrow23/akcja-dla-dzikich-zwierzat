@@ -12,10 +12,16 @@ const { post } = Astro.props
     <a href={`/blog/${post.slug}`}>
         <img 
             src ={post.data.image}
-            width={312}
-            height={232}
+
             alt={post.data.title}
         />
+    </a>
+    <a
+    href={`/blog/${post.slug}`}
+    >
+        <h2>
+            {post.data.date}
+        </h2>
     </a>
     <a
         href={`/blog/${post.slug}`}

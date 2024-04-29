@@ -65,13 +65,13 @@
 
 <style>
     footer {
-        display: flex;
-        flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    word-break: break-word;
+    padding: 50px 40px;
 
-        padding: 50px 40px;
-
-        color: white;
-        background-color: #263435;
+    color: white;
+    background-color: #263435;
     }
 
     span {
@@ -152,8 +152,18 @@
     }
 
     @media  (max-width: 768px) {
-        .fond-info {
-            padding-inline: 10%;
+
+        footer {
+            padding-inline: 3%;
         }
+
+    .fond-info {
+        justify-content: flex-start;
     }
+
+    .fond-logo {
+        justify-content: flex-start;
+    }
+
+}
 </style>
