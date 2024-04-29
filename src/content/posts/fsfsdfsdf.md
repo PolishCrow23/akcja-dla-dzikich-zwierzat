@@ -1,7 +1,7 @@
 ---
 title: fsfsdfsdf
-pubDate: 14.09.2023
+date: 12.11.2023
 description: fsdfsdf
-heroImage: /images/posts/red-striped-minimal-modern-winter-christmas-dinner-flyer.png
+image: /images/posts/red-striped-minimal-modern-winter-christmas-dinner-flyer.png
 ---
 fsdfsdfsdf
