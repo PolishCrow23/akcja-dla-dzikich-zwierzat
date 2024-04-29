@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/PostLayout.astro
+
 title: O Akcji
 description: Akcja dla Dzikich Zwierząt Akcja dla Dzikich Zwierząt Akcja dla Dzikich Zwierząt 
 image: "/images/meta/hero.png"
