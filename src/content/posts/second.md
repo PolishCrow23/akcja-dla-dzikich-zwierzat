@@ -1,7 +1,6 @@
 ---
 title: Uszatka uratowana
-date: 08/10/2023
-description: Akcja dla Dzikich Zwierząt Akcja dla Dzikich Zwierząt Akcja dla Dzikich Zwierząt
+date: November 9 2023
 image: "/images/meta/hero.png"
 ---
 

@@ -8,7 +8,7 @@ type Props = {
 const { post } = Astro.props
 ---
 
-<div>
+<div class="post-card">
     <a href={`/blog/${post.slug}`}>
         <img 
             src ={post.data.image}
@@ -38,8 +38,8 @@ const { post } = Astro.props
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        width: 344px;
-        height: 431px;
+        max-width: 344px;
+        min-height: 431px;
         border-radius: 16px;
         padding: 1.1em 1em 2em 1em;
 
@@ -98,6 +98,7 @@ const { post } = Astro.props
     img {
         border-radius: 8px;
         object-fit: cover;
+        width: 100%;
     }
 
     .post-card:hover {
@@ -108,4 +109,5 @@ const { post } = Astro.props
     .post-card {
         transition-duration: 0.5s;
     }
+
 </style>
