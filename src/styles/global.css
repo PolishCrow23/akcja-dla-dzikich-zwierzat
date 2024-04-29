@@ -134,4 +134,8 @@ hr {
             width: 50%;
             gap: 10px;
         }
+
+        main {
+            padding-inline: 2%;
+        }
     }
