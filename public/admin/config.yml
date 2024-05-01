@@ -20,7 +20,7 @@ collections:
       - {label: "zdjęcie główne", name: "image", widget: "image"}
       - {label: "tekst", name: "body", widget: "markdown"}
 
-    - label: "Blog"
+    - label: "Pages"
       name: "pages" # Used in routes, e.g., /admin/collections/blog
       label: "Blog" # Used in the UI
       folder: "src/pages" # The path to the folder where the documents are stored
