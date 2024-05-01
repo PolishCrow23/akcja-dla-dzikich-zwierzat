@@ -7,6 +7,11 @@ type Props = {
 }
 
 const { post } = Astro.props
+
+let words = post.body.split(' ').slice(0, 22);
+let shortenedBody = words.join(' ');
+let tripleDot = '...';
+let text = shortenedBody + tripleDot;
 ---
 
 <div class="post-card">
@@ -31,7 +36,7 @@ const { post } = Astro.props
         </a>
     </div>
     <p>
-        {post.body}
+        {text}
     </p>
     <a class="show-more" href={`/blog/${post.slug}`}>
         Więcej<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M10 17.75a.74.74 0 0 1-.53-.22a.75.75 0 0 1 0-1.06L13.94 12L9.47 7.53a.75.75 0 0 1 1.06-1.06l5 5a.75.75 0 0 1 0 1.06l-5 5a.74.74 0 0 1-.53.22"/></svg>
@@ -43,7 +48,7 @@ const { post } = Astro.props
     .post-card {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         max-width: 344px;
         min-height: 431px;
@@ -123,6 +128,13 @@ const { post } = Astro.props
         color: var(--celadon);
     }
     
+    p {
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: var(--gray);
+        line-height: 18px;
+    }
+
     img {
         border-radius: 8px;
         object-fit: cover;
