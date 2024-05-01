@@ -1,5 +1,6 @@
 ---
-import { type CollectionEntry } from "astro:content"
+import { type CollectionEntry } from "astro:content";
+import FormattedDate from "./FormattedDate.astro";
 
 type Props = {
     post: CollectionEntry<"posts">
@@ -17,30 +18,28 @@ const { post } = Astro.props
             alt={post.data.title}
         />
     </a>
-    <a
-    href={`/blog/${post.slug}`}
-    >
-        <h2>
-            {post.data.date}
-        </h2>
-    </a>
-    <a
-        href={`/blog/${post.slug}`}
-    >
-        <h2>
-            {post.data.title}
-        </h2>
-    </a>
+    <div class="title-post">
+        <a href={`/blog/${post.slug}`}>
+            <h2 class="title">
+                {post.data.title}
+            </h2>
+        </a>
+        <a href={`/blog/${post.slug}`}>
+            <h2 class="date">
+                <FormattedDate date={post.data.date}>
+            </h2>
+        </a>
+    </div>
     <p>
         {post.body}
     </p>
     <a class="show-more" href={`/blog/${post.slug}`}>
-        Pokaż więcej
+        Więcej<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="none" stroke="#14AAA1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 7l5 5l-5 5"/></svg>
     </a>
 </div>
 
 <style>
-    div {
+    .post-card {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -48,18 +47,34 @@ const { post } = Astro.props
         max-width: 344px;
         min-height: 431px;
         border-radius: 16px;
-        padding: 1.1em 1em 2em 1em;
+        padding: 16px;
 
         background-color: white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
         transition-duration: 0.5s;
     }
+    .date {
+        color: var(--gray);
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+    .title {
+        color: var(--black);
+        font-size: 2.2rem;
+        font-weight: 500;
+    }  
 
-    div:hover {
+    .post-card:hover {
         transform-origin: top;
         transition-duration: 0.5s;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .title-post {
+        display: flex;
+        gap: 2em;
+        align-items: center;
     }
 
     svg {
@@ -99,6 +114,8 @@ const { post } = Astro.props
 
     .show-more {
         margin-left: auto;
+        font-weight: 500;
+        font-size: 1.4rem;
         color: var(--celadon);
     }
     

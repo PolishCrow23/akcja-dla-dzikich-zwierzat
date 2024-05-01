@@ -1,12 +1,14 @@
 
 <header>
-    <div class="social-links">
-        <a href="https://www.facebook.com/AkcjaDzikieKrakow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5Z"/></svg>
-        </a>
-        <a href='https://www.instagram.com/akcjadladzikichzwierzat'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37zm1.5-4.87h.01"/></g></svg>
-        </a>
+    <div class="social-links-container">
+        <div class="social-links">
+            <a href="https://www.facebook.com/AkcjaDzikieKrakow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5Z"/></svg>
+            </a>
+            <a href='https://www.instagram.com/akcjadladzikichzwierzat'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37zm1.5-4.87h.01"/></g></svg>
+            </a>
+        </div>
     </div>
 
     <div class="text">
@@ -34,6 +36,11 @@
 </header>
 
 <style>
+
+    .social-links-container {
+        background-color: var(--celadon);
+    }
+
     .button svg {
     vertical-align: middle;
     margin-left: 5px;
@@ -42,6 +49,8 @@
     .social-links {
         height: 57px;
         padding-inline: 45px;
+        max-width: 1920px;
+        margin: 0 auto;
 
         display: flex;
         gap: 10px;
@@ -49,7 +58,7 @@
         align-items: center;
         flex-wrap: wrap;
 
-        background-color: var(--celadon);
+        
     }
 
     .social-links a {
@@ -97,11 +106,13 @@
     navigation {
         padding-inline: calc(6vw + 0.1rem);
         padding-block: 20px;
+        margin-inline: auto;
 
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 20px;
+        max-width: 1920px;
     }
 
     navigation .internal-links {
@@ -120,6 +131,8 @@
         color: var(--black);
         font-size: calc(3.6vw + 0.1rem)
     }
+
+
 
 
 	@media  (max-width: 768px) {

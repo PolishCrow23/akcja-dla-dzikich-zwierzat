@@ -8,15 +8,17 @@ const { posts } = Astro.props
 ---
 
 <section>
-    <h2>Blog</h2>
-    <hr>
-    <div class="cards-container">
-        {posts.map((post) => <Post post={post}/>)}
+    <div class="container">
+        <h2>Blog</h2>
+        <hr>
+        <div class="cards-container">
+            {posts.slice(0, 3).map((post) => <Post post={post} />)}
+        </div>
     </div>
 </section>
 
 <style>
-    div {
+    .cards-container {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -41,7 +43,9 @@ const { posts } = Astro.props
 
     section { 
         background-color: #fafafa;
-        padding: 6em;
+        
+        
+        padding: 6em 9em 10em 9em;
     }
 
     h2 {
@@ -89,9 +93,16 @@ const { posts } = Astro.props
         color: var(--celadon);
     }
 
+    .container {
+        margin: 0 auto;
+        max-width: 1920px;
+    }
+
     .cards-container {
-        justify-content: center;
+        justify-content: space-between;
+        margin-top: 60px;
         gap: 3em;
+
     }
     
     img {

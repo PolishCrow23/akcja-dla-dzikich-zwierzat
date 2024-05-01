@@ -1,16 +1,21 @@
-<div>
-    <h1 class="hero-title">OŚRODEK REHABILITACJI</br>DZIKICH ZWIERZĄT</h1>
-    <h1 class="motto">DAJEMY DRUGĄ SZANSĘ!</h1>
-</div>
+<section>
+    <div>
+        <h1 class="hero-title">OŚRODEK REHABILITACJI</br>DZIKICH ZWIERZĄT</h1>
+        <h1 class="motto">DAJEMY DRUGĄ SZANSĘ!</h1>
+    </div>
+</section>
 
 <style>
-    div {
+    section {
         background: linear-gradient(90deg, rgba(18,122,116,0.90) 0%, rgba(18,122,116,0.85) 25%, rgba(18,122,116,0.4) 40%, rgba(18,122,116,0) 50%), url("/images/meta/hero.png");
         background-size: cover;
-        padding: 95px 70px;
         background-repeat: no-repeat;
-        /* min-height: 95px; */
         color: white;
+    }
+    div {
+        padding: 95px 70px;
+        max-width: 1920px;
+        margin: 0 auto;
     }
 
     .hero-title {
@@ -35,5 +40,9 @@
             background-size: cover;
             padding-inline: 3%;
         }
+    }
+
+    @media  (min-width: 3000px) {
+
     }
 </style>
