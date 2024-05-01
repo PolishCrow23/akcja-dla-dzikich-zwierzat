@@ -1,7 +1,6 @@
 ---
-
+layout: ../layouts/PageLayout.astro
 title: Jak nam pomóc?
-description: Akcja dla Dzikich Zwierząt Akcja dla Dzikich Zwierząt Akcja dla Dzikich Zwierząt 
 image: "/images/meta/hero.png"
 ---
 ​

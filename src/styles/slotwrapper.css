@@ -29,3 +29,23 @@ a:hover {
     font-size: 2.4rem;
     margin-block: 1.2em 0.8em;
 }
+
+main {
+    margin-block: 4em 6em;
+    margin-inline: 2%;
+}
+.post {
+    max-width: 720px;
+    margin: 0 auto;
+}
+.title {
+    margin: 0 6em 0 5em;
+}
+.post h1 {
+    text-align: center;
+    font-size: 3.6rem;
+}
+.post hr {
+    width: 100%;
+    margin: 0 auto 4em;
+}

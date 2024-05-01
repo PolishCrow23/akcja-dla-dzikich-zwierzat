@@ -34,8 +34,9 @@ const { post } = Astro.props
         {post.body}
     </p>
     <a class="show-more" href={`/blog/${post.slug}`}>
-        Więcej<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="none" stroke="#14AAA1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 7l5 5l-5 5"/></svg>
+        Więcej<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M10 17.75a.74.74 0 0 1-.53-.22a.75.75 0 0 1 0-1.06L13.94 12L9.47 7.53a.75.75 0 0 1 1.06-1.06l5 5a.75.75 0 0 1 0 1.06l-5 5a.74.74 0 0 1-.53.22"/></svg>
     </a>
+
 </div>
 
 <style>
@@ -80,11 +81,14 @@ const { post } = Astro.props
     svg {
     vertical-align: middle;
     }
+
+
     h2 {
         font-size: 2rem;
     }
     a { 
         color: var(--black);
+        fill: #6F7775;
     }
     a:hover {
         color: var(--gray);
@@ -94,7 +98,7 @@ const { post } = Astro.props
     }
     .description {
         font-size: 1.4rem;
-        color: var(--gray);
+        fill: var(--gray);
     }
 
     .title h2 {

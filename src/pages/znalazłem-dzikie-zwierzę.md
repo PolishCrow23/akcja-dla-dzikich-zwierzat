@@ -1,7 +1,6 @@
 ---
-
+layout: ../layouts/PageLayout.astro
 title: Znalazłem dzikie zwierzę
-description: Akcja dla Dzikich Zwierząt Akcja dla Dzikich Zwierząt Akcja dla Dzikich Zwierząt 
 image: "/images/meta/hero.png"
 ---
 
