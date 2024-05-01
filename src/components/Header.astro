@@ -23,10 +23,12 @@
                 </div>
                 <ul class="internal-links">
                     <li><a href="/o-akcji">O AKCJI</a></li>
-                    <li><a href="wolontariat">WOLONTARIAT</a></li>   
-                    <li><a href="/blog">BLOG</a></li>           
-                    <li><a href="jak-nam-pomóc">JAK NAM POMÓC?</a></li>
-                    <li><a href="kontakt">KONTAKT</a></li>
+                    <li><a href="/wolontariat">WOLONTARIAT</a></li>              
+                    <li><a href="/jak-nam-pomóc">JAK NAM POMÓC?</a></li>
+                    <li><a href="/wolontariat">WSPIERAJĄ NAS</a></li>
+                    <li><a href="/blog">BLOG</a></li> 
+                    <li><a href="/wolontariat">PROJEKTY</a></li> 
+                    <li><a href="/kontakt">KONTAKT</a></li>
                 </ul>
             </div>
             </div>
@@ -121,6 +123,7 @@
 
     navigation .internal-links {
         color: var(--celadon);
+        flex-wrap: wrap;
     }
 
     .logo-div {
@@ -139,7 +142,7 @@
 
 
 
-	@media  (max-width: 1078px) {
+	@media  (max-width: 1320px) {
         navigation {
             flex-direction: column;
             padding-inline: 2%;
@@ -147,6 +150,10 @@
         .buttons {
             justify-content: center;
             flex-wrap: wrap;
+        }
+
+        .internal-links {
+            margin-block: 1em;
         }
 
         h1 {
