@@ -6,11 +6,11 @@ type Props = {
 }
 const { posts } = Astro.props
 ---
-
+<!-- checked -->
 <section>
     <div class="container">
         <h2>Blog</h2>
-        <hr>
+        <hr class="hr-thick">
         <div class="cards-container">
             {posts.slice(0, 3).map((post) => <Post post={post} />)}
         </div>
@@ -22,121 +22,34 @@ const { posts } = Astro.props
 </section>
 
 <style>
+    section {   
+        padding: 5em 9em 4em 9em;
+    }
+
+    .container {
+        margin-inline: auto;
+        max-width: 1920px;
+    }
+
     .cards-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-    }
-
-    hr {
-        border-top: 7px solid #14aaa1;
-        margin-bottom: 3em;
-        width: 65px;
-    }
-</style>
-
-
-<style>
-    svg {
-    vertical-align: middle;
-    }
-
-    a:hover {
-        color: var(--cel);
-    }
-
-    section { 
-        background-color: #fafafa;
-        
-        
-        padding: 5em 9em 4em 9em;
+        gap: 3em;
+        margin-block: 7em 8em;
     }
 
     h2 {
         font-size: 4rem;
     }
+
     h3 {
         font-size: 2rem;
     }
-    .heroImg {
-        margin-inline: auto;
-    }
-    img {
-        margin: 0 auto;
-    }
-    .wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 3em;
-    }
-
-    .description {
-        font-size: 1.4rem;
-        color: var(--gray);
-    }
-
-
-    .title h2 {
-        font-size: 2.2rem;
-    }
-
-    .title {
-        color: var(--black);
-    }
-
-    .title-date {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1em;
-    }
-
-    .more-info {
-        margin-left: auto;
-        color: var(--celadon);
-    }
-
-    .container {
-        margin: 0 auto;
-        max-width: 1920px;
-    }
-
-    .cards-container {
-        justify-content: space-between;
-        margin-block: 7em 12em;
-        gap: 3em;
-
-    }
-
-    .chevron-link {
-        font-weight: 500;
-        font-size: 1.4rem;
-        color: var(--celadon);
-        display: block;
-        text-align: right;
-    }
-    
-    img {
-        max-width: 312px;
-        max-height: 232px;
-        border-radius: 8px;
-        object-fit: cover;
-    }
-
-    .post-card:hover {
-        transform-origin: top;
-        transition-duration: 0.5s;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    }
-    .post-card {
-        transition-duration: 0.5s;
-    }
-    
-    @media  (max-width: 752px) {
+      
+    @media  (max-width: 758px) { 
         .cards-container {
-            display: flex;
-
+            justify-content: center;
         }
     }
 

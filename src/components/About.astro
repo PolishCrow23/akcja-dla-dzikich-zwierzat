@@ -1,80 +1,72 @@
+<!-- checked -->
 <section>
-    <div class="container">
-        <div class="images">
-            <img class="big-img" src="/images/index/about.png">
+    <div class="flex-container">
+        <div>
+            <img src="/images/index/about.png">
         </div>
-        <div class="about-text">
+        <div class="text">
             <div>
                 <h2>O Akcji</h2>
-                <hr>
+                <hr class="thick-hr">
             </div>
-            <p>W celu ratowania dzikich zwierząt w przychodni Vetika została powołana Fundacja Akcja dla Dzikich Zwierząt, która prowadzi ośrodek rehabilitacji dzikich zwierząt.</p>
+            <p>
+                W celu ratowania dzikich zwierząt w przychodni Vetika została powołana Fundacja Akcja dla Dzikich Zwierząt, która prowadzi ośrodek rehabilitacji dzikich zwierząt.
+            </p>
             <ul>
-                <li><img class="check" src="/images/meta/check.png"> Leczymy i rehabilitujemy zwierzęta dziko występujące</li>
-                <li><img class="check" src="/images/meta/check.png"> Rocznie przyjmujemy ponad 1000 zwierząt</li>
+                <li>
+                    <img class="check" src="/images/meta/check.png"> Leczymy i rehabilitujemy zwierzęta dziko występujące</li>
+                <li>
+                    <img class="check" src="/images/meta/check.png">
+                    Rocznie przyjmujemy ponad 1000 zwierząt
+                </li>
             </ul>
 
-            <a class="button button-celadon" href="o-akcji">O nas <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 710 780"><path fill="currentColor" d="M651 55q29 27 44 61t15 71t-13 71t-42 63L371 605q-7 7-16 7t-17-7L54 321q-27-28-40-63T1 187t14-71t42.5-61T121 17t70-11t70 16t61 42l33 33l33-33q27-27 61-42t70-16t70 11t62 38z"/></svg></a>
+            <a class="button button-celadon" href="o-akcji">
+                O nas 
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 710 780"><path fill="currentColor" d="M651 55q29 27 44 61t15 71t-13 71t-42 63L371 605q-7 7-16 7t-17-7L54 321q-27-28-40-63T1 187t14-71t42.5-61T121 17t70-11t70 16t61 42l33 33l33-33q27-27 61-42t70-16t70 11t62 38z"/>
+                </svg>
+            </a>
         </div>
     </div>
 </section>
 
 <style>
-    h2 {
-        font-size: 4rem;
-    }
-
-    p {
-        color: var(--gray);
-    }
-
-    li {
-        display: flex;
-        align-items: center;
-        gap: 1em;
-        margin-bottom: 0.8em;
-
-        font-weight: 400;
-        font-size: 1.6rem;
-    }
-
     section {
         max-width: 1920px;
-        margin: 0 auto;
+        margin-inline: auto;
         padding: 7em 8em;
     }
 
-    section > div {
+    .flex-container {
         display: flex;
         gap: 5em;
-        /* flex: 1; */
     }
 
-    .about-text {
+    .text {
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 4em;
     }
 
-
-    .big-img {
-        width: 100%;
+    h2 {
+        font-size: 4rem;
     }
 
-    .small-img {
-        max-width: 233px;
-        width: 100%;
+    li {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+
+        margin-bottom: 0.8em;
+
+        font-weight: 400;
+        font-size: 1.6rem;
     }
 
-    .button svg {
-    vertical-align: middle;
-    margin-left: 5px;
-    }
-
-    hr {
-        border-top: 7px solid #14aaa1;
-        width: 65px;
+    p {
+        color: var(--gray);
     }
 
     .check {
@@ -83,19 +75,13 @@
     }
 
     @media (max-width: 900px) {
-        section > div {
+        .flex-container {
             flex-direction: column;
             gap: 1.6em;
         }
-        .about-text {
-            gap: 1em;
-        }
 
-    @media (max-width: 900px) {
         section {
-            padding-inline: 3%;
+            padding-inline: 2%;
         }
-
-        
     }
 </style>

@@ -1,14 +1,18 @@
 <footer>
-    <div class="wrapper">
-        <div class="fond-logo">
-            <div class="logo-div">
+    <div class="container">
+        <div class="logo-div">
+            <div class="logo">
                 <img src="/images/meta/logo-footer.png">
                 <h2>Fundacja</br> Akcja dla Dzikich Zwierząt</h2>
             </div>
             <div>
                 <ul>
-                    <li>KRS: 0000465258</li>
-                    <li>Nr konta: 15 1140 2004 0000 3802 8378 9982</li>
+                    <li>
+                        KRS: 0000465258
+                    </li>
+                    <li>
+                        Nr konta: 15 1140 2004 0000 3802 8378 9982
+                    </li>
                 </ul>
             </div>
             <div>
@@ -21,9 +25,12 @@
             </div>
             <div>
                 <span>
-                    Projekt graficzny: <a href="https://www.linkedin.com/in/ewa-kostorz/">Ewa Kostorz</a>. Programowanie: Iga Spodzieja
+                    Projekt graficzny: 
+                    <a href="https://www.linkedin.com/in/ewa-kostorz/">Ewa Kostorz</a>. Programowanie: Iga Spodzieja
                 </span>
-                <span>Wykonane w <a href="https://astro.build">Astro</a>.</span>
+                <span>
+                    Wykonane w <a href="https://astro.build">Astro</a>.
+                </span>
             </div>
         </div>
 
@@ -32,31 +39,57 @@
                 <ul>
                     <h4>Menu</h4>
                     <hr>
-                    <li><a href="o-akcji">O Akcji</a></li>
-                    <li><a href="wolontariat">Wolontariat</a></li>
-                    <li><a href="znalazłem-dzikie-zwierzę">Znalazłem dzikie zwierzę</a></li>
-                    <li><a href="jak-nam-pomóc">Jak nam pomóc?</a></li>
-                    <li><a href="kontakt">Kontakt</a></li>
+                    <li>
+                        <a href="o-akcji">O Akcji</a>
+                    </li>
+                    <li>
+                        <a href="wolontariat">Wolontariat</a>
+                    </li>
+                    <li>
+                        <a href="znalazłem-dzikie-zwierzę">Znalazłem dzikie zwierzę</a>
+                    </li>
+                    <li>
+                        <a href="jak-nam-pomóc">Jak nam pomóc?</a>
+                    </li>
+                    <li>
+                        <a href="kontakt">Kontakt</a>
+                    </li>
                 </ul>
             </div>
             <div>  
                 <ul>
                     <h4>Adres</h4>
                     <hr>
-                    <li>ul. Lipska 49</li>
-                    <li>30-721 Kraków</li>
-                    <li>tel.: +48 511 195 708</li>
-                    <li>e-mail: akcjadladzikichzwierzat@gmail.com</li>
+                    <li>
+                        ul. Lipska 49
+                    </li>
+                    <li>
+                        30-721 Kraków
+                    </li>
+                    <li>
+                        tel.: +48 511 195 708
+                    </li>
+                    <li>
+                        e-mail: akcjadladzikichzwierzat@gmail.com
+                    </li>
                 </ul>
             </div>
             <div>    
                 <ul>
                     <h4>Godziny otwarcia</h4>
                     <hr>
-                    <li><h5>Poniedziałek - Piątek:</h5> 9:00 - 21:00</li>
-                    <li><h5>Czwartek:</h5> 9:00 - 14:00 i 15:00 - 21:00</li>
-                    <li><h5>Sobota:</h5> 9:00 - 16:00</li>
-                    <li><h5>Niedziela:</h5> 10:00 - 15:00</li>
+                    <li>
+                        <h5>Poniedziałek - Piątek:</h5> 9:00 - 21:00
+                    </li>
+                    <li>
+                        <h5>Czwartek:</h5> 9:00 - 14:00 i 15:00 - 21:00
+                    </li>
+                    <li>
+                        <h5>Sobota:</h5> 9:00 - 16:00
+                    </li>
+                    <li>
+                        <h5>Niedziela:</h5> 10:00 - 15:00
+                    </li>
                 </ul>
             </div>
         </div>
@@ -65,39 +98,48 @@
 
 <style>
     footer {
-    /* display: flex;
-    flex-direction: column; */
-    word-break: break-word;
-    padding: 50px 40px;
+        padding: 7em 4em;
 
-    color: white;
-    background-color: #263435;
+        color: white;
+        background-color: var(--black);
+
+        word-break: break-word;
     }
 
-    span {
-        display: block;
-    }
-
-    .wrapper {
+    .container {
         display: flex;
-        flex-direction: row;
         justify-content: space-around;
         flex-wrap: wrap;
-        gap: 50px;
+        gap: 5em;
+
         max-width: 1920px;
-        margin: 0 auto;
+        margin-inline: auto;
     }
 
-    .fond-logo {
+    .logo-div {
         display: flex;
         flex-direction: column;
         gap: 1.5em;
     }
 
-
-    .logo-div {
+    .logo {
         display: flex;
         gap: 1em;
+    }
+
+    img {
+        width: 36px;
+    }
+
+    .fond-info {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 3em;
+    }
+
+    span {
+        display: block;
     }
 
     h2 {
@@ -106,21 +148,10 @@
         font-size: 2.1rem;
     }
 
-    img {
-        width: 100%;
-        width: 43px;
-    }
-
     a:hover{
         color: var(--gray);
     }
 
-    .fond-info {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 50px;
-    }
     a {
         color: white;
     }
@@ -128,44 +159,45 @@
     h4 {
         margin-bottom: 2px;
         font-size: 1.8rem;
-        font-family: 'Roboto';
-    }
-
-    .authors {
-        /* margin: 0 auto; */
-        margin-block: 40px 20px;
     }
 
     li {
-        font-family: 'Roboto';
         font-weight: 300;
         font-size: 1.6rem;
         margin-bottom: 0.2em;
     }
-    li a {
-        font-weight: 400;
-    }
 
     h5 {
         display: inline;
-        font-family: 'Roboto';
-        font-weight: 400;
         font-size: 1.6rem;
+        font-weight: 400;
     }
+
+    @media  (max-width: 1200px) {
+        footer {
+            padding-block: 5em;
+        }
+}
 
     @media  (max-width: 768px) {
+        .fond-info {
+            justify-content: flex-start;
+        }
+        .fond-logo {
+            justify-content: flex-start;
+        }
+}
 
+    @media  (max-width: 480px) {
         footer {
-            padding-inline: 3%;
+            padding-block: 4em;
+            padding-inline: 6%;
         }
 
-    .fond-info {
-        justify-content: flex-start;
-    }
-
-    .fond-logo {
-        justify-content: flex-start;
-    }
+        .container {
+            flex-direction: column;
+            align-content: center;
+        }
 
 }
 </style>
