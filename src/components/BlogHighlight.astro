@@ -1,16 +1,17 @@
 ---
-import type { CollectionEntry } from "astro:content"
-import Post from "./Post.astro"
+import type { CollectionEntry } from "astro:content";
+import Post from "./Post.astro";
+
 type Props = {
     posts: CollectionEntry<"posts">[]
 }
-const { posts } = Astro.props
+const { posts } = Astro.props;
 ---
 <!-- checked -->
 <section>
     <div class="container">
         <h2>Blog</h2>
-        <hr class="hr-thick">
+        <hr class="thick-hr">
         <div class="cards-container">
             {posts.slice(0, 3).map((post) => <Post post={post} />)}
         </div>
@@ -24,6 +25,7 @@ const { posts } = Astro.props
 <style>
     section {   
         padding: 5em 9em 4em 9em;
+        background-color: #fafafa;
     }
 
     .container {
