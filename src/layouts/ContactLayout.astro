@@ -28,7 +28,7 @@ const { frontmatter } = Astro.props;
                 <h2>Formularz kontaktowy</h2>
                 <form name="contact" method="POST" data-netlify="true">
                     <p>
-                        <label>Twoje imię: <input type="text" name="name" /></label>   
+                        <label>Twoje imię (i nazwisko): <input type="text" name="name" /></label>   
                     </p>
                     <p>
                         <label>Twój e-mail: <input type="email" name="email" /></label>
@@ -37,7 +37,7 @@ const { frontmatter } = Astro.props;
                         <label>Wiadomość: <textarea name="message"></textarea></label>
                     </p>
                     <p>
-                        <button class="button button-celadon" type="submit">Send</button>
+                        <button class="button button-celadon" type="submit">Wyślij</button>
                     </p>
                 </form>
             </section>
@@ -50,7 +50,7 @@ const { frontmatter } = Astro.props;
         max-width: 720px;
         margin: 0 auto;
         background-color: #fafafa;
-        padding: 2em 4em;
+        padding: 5em 5em;
         border-radius: 16px;
     }
 
@@ -79,12 +79,12 @@ const { frontmatter } = Astro.props;
     }
 
     h2 {
-        font-size: 2.4rem;
-        margin-block: 1.2em 0.8em;
+        font-size: 3.2rem;
+        margin-bottom:2em;
         text-align: center;
     }
 
     section:first-of-type {
-        margin-bottom: 6em;
+        margin-bottom: 7em;
     }
 </style>
