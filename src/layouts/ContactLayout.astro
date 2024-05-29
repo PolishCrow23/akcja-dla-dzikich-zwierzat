@@ -65,7 +65,7 @@ const { frontmatter } = Astro.props;
                             .then(async (response) => {
                                 let json = await response.json();
                                 if (response.status == 200) {
-                                    result.innerHTML = json.message;
+                                    result.innerHTML = "Formularz został wysłany!";
                                 } else {
                                     console.log(response);
                                     result.innerHTML = json.message;
