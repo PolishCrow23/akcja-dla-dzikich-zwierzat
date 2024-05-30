@@ -1,0 +1,105 @@
+<section class="contact-form">
+    <h2>Formularz kontaktowy</h2>
+</p>
+    <div class="feedback-form">
+
+        <form method="POST" id="form">
+
+            <input type="hidden" name="access_key" value="9ec0edb2-021c-47fa-b597-33696ed222e7">
+            <input type="hidden" name="from_name" value="Formularz kontaktowy">
+            <label for="name" "text">Twoje imię i nazwisko:</label>
+            <input type="text" name="name" id="name" required>
+            <label for="email">Twój e-mail:</label>
+            <input type="email" name="email" id="email" required>
+            <label for="message">Wiadomość:</label>
+            <textarea name="message" required></textarea>
+            <button type="submit" class="button button-celadon">Wyślij</button>
+            <div id="result"></div>
+        </form>
+    
+    </div>
+</section>
+
+<style>
+    .contact-form {
+    max-width: 720px;
+    margin: 0 auto;
+    background-color: #fafafa;
+    padding: 5em 5em;
+    border-radius: 16px;
+    }
+
+    label {
+        display: block;
+        font-size: 1.6rem;
+        margin-block: 1em 0.4em;
+    }
+
+    button {
+        display: block;
+        margin-inline: auto;
+        margin-top: 2em;
+    }
+
+    input, textarea {
+        width: 100%;
+        border: 1px solid var(--gray);
+        border-radius: 2px;
+    }
+
+    input {
+        height: 30px;
+    }
+
+    textarea {
+        height: 200px;
+    }
+    h2 {
+        font-size: 3.2rem;
+        margin-bottom:2em;
+        text-align: center;
+    }
+</style>
+
+<script>
+    const form = document.getElementById('form');
+    const result = document.getElementById('result');
+    
+    form.addEventListener('submit', function(e) {
+        const formData = new FormData(form);
+        e.preventDefault();
+    
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+    
+        result.innerHTML = "Please wait..."
+    
+        fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = "Formularz został wysłany!";
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+            })
+            .then(function() {
+                form.reset();
+                setTimeout(() => {
+                    result.style.display = "none";
+                }, 3000);
+            });
+    });
+    </script>
