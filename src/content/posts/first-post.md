@@ -1,5 +1,5 @@
 ---
-title: Historia łabędzia 
+title: Testowy post
 date: November 9 2023
 image: /images/index/post-highlight.png
 ---
