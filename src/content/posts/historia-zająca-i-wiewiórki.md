@@ -1,7 +1,7 @@
 ---
 title: Historia zająca i wiewiórki
 date: 05.01.2024
-image: /images/posts/post-highlight.png
+image: /images/index/post-highlight.png
 ---
 
 Mamy nadzieję, że historia z łabędziem skończy się dobrze. Dzięki interwencji pracowników firmy Staco Polska z Niepołomic w zeszłym tygodniu trafił do nas młody osobnik ze złamanym skrzydłem.
