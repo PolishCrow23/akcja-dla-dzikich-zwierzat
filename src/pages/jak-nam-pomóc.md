@@ -12,7 +12,7 @@ Pomóż nam pomagać i wesprzyj ratowanie dzikich zwierząt w wybrany przez sieb
 - wpłać darowiznę tytułem „na cele statutowe" na konto Fundacji Akcja dla Dzikich Zwierząt:
 15 1140 2004 0000 3802 8378 9982
 - [zostań naszym Patronem](https://patronite.pl/AkcjaDlaDzikichZwierzat) i wspieraj nasze działania regularnymi wpłatami dostosowanymi do Twoich chęci i możliwości 
-- [wesprzyj nasze zbiórki](https://pomagam.pl/akcjadlajezy) – obecnie na portalu pomagam.pl zbieramy fundusze na opiekę nad naszymi jeżami 
+- [wesprzyj nasze zbiórki na portalu pomagam.pl](https://pomagam.pl/org/akcjadladzikichzwierzat)
 - dołącz do grona naszych Sponsorów
 - przekaż 1,5% podatku dochodowego wpisując w rozliczeniu podatkowym nr KRS: 0000325626 oraz cel szczegółowy "Fundacja Akcja Dla Dzikich Zwierząt"
 
